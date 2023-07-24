@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+@font-face {
+    font-family: "Ichiji-two";
+    src: url('/fonts/Ichiji-Two.otf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Nunito-light";
+    src: url('/fonts/Nunito-Light.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Nunito-black";
+    src: url('/fonts/Nunito-Black.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+h1 {
+    font-family: 'Ichiji-two';
+}
+
+p, li, label, button{
+    font-family: 'Nunito-light';
+    font-weight: 600;
+}

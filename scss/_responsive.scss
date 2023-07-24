@@ -1,0 +1,138 @@
+@media (min-width: 1200px){
+    .header{
+        justify-content: space-around;
+    }
+    .skew__text{
+        font-size: 1.5rem;
+    }
+}
+@media (max-width: 1200px){
+
+    .skew{
+
+        &__line{
+            flex-direction: column;
+
+            &--two{
+                gap: 4em;
+            }
+        }
+
+        &__text{
+            font-size: 1.5rem;
+
+            &--right{
+                order: 2;
+                width: max(85%, 334px);
+                font-size: 1.5rem;
+            }
+        }
+        &__img{
+        
+            &--fondo{
+                width: 50%;
+                order: 1;
+            }
+        }            
+    }     
+    
+    .contact{
+        margin: 12em 0;
+
+        &::after{
+            top: -12%;
+        }
+        &::before{
+            top: 92%;
+        }
+    }
+
+    .inputs-content{
+        flex-direction: column;
+
+        & div{
+            width: 100%;
+        }
+    }
+
+}
+
+@media (max-width: 800px) {
+    .header{
+        padding: 1rem 1rem;
+    }
+
+    .menul{
+        position: fixed;
+        inset: 0;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #0000004f;
+        user-select: none;
+        z-index: 20;
+
+        & > div{
+            position: relative;
+            width: max(52%, 265px);
+            background-color: #fff;
+            border-radius: 2em;
+
+            &::before{
+                content: "";
+                display: block;
+                padding-top: 100%;
+            }
+        }
+
+        &__container{
+            position: absolute;
+            inset: 0;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1.5em;
+        }
+    }
+    .open-menul{
+        display: block;
+        color: #fff;
+        font-size: 1.7em;
+        cursor: pointer;
+    }
+    .close-menul{
+        display: block;
+        position: absolute;
+        top: 3%;
+        right: 4%;
+        z-index: 3;
+        font-size: 1.4em;
+    }
+    .open-menul-flex{
+        display: flex;
+    }
+    .close-menul-none{
+        display: none;
+    }
+
+    .slider{
+        &__buttons{
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.9em;
+            left: calc(50% - 9em);
+            right: calc(50% - 9em);
+            width: 18em;
+            height: 8em;
+            padding: 0.7em;
+
+            &__element{
+                width: 28%;
+                height: 45%;
+            }
+        }
+    }
+
+}

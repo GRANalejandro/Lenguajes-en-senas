@@ -1,0 +1,123 @@
+doctype html
+html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Idiomas en señas
+        link(rel="stylesheet", href="./css/main.css")
+        link(rel="stylesheet", href="https://unicons.iconscout.com/release/v4.0.8/css/line.css")
+        link(rel="shortcut icon", href="./logo/señas-V-2-colores-.ico", type="image/x-icon")
+    body 
+        - var menu_item = ["Home","Explore","About","Blog","Contact"];
+        - var slider_img = ["IMG_1563.jpg", "2023_06_02_16_23_41_836.jpg", "1.jpg", "3.jpg", "2023_06_02_16_11_55_599.jpg"];
+        - var alt_img_slider = ["Grupo de personas posando para una foto grupal", "Grupo de personas hablando en lenguaje en señas", "Profesor hablando en lengua de señas", "Tres personas hablando en leguaje de señas", "La lider leidy hablando"];
+        - var name_social = ["facebook", "instagram"]
+        - var link_social = ["https://www.facebook.com/Idiomasensenas?mibextid=ZbWKwL", "https://instagram.com/idiomas_en_senas?igshid=ZDc4ODBmNjlmNQ"];
+
+        header.header
+            .logo
+                img(src="./logo/Logomenu2.svg", alt="Logo de idiomas en señas")
+
+            nav.menul
+                div 
+                    .close-menul
+                        i.uil.uil-times.nav-close-btn
+                    ul.menul__container
+                        each item in menu_item
+                            li.menul__item=item
+
+            .open-menul 
+                i.uil.uil-apps.nav-menu-btn
+        main.main
+
+            input#s1(type="radio", name="slider", checked)
+            each item, index in Array(4)
+                input(id=`s${index+2}`, type="radio", name="slider")
+
+            
+            section.slider
+                article.slider__content
+                    each item, index in slider_img
+                        .slider__content__element
+                            img.slider__img(src=`./img/${item}`, alt=`${alt_img_slider[index]}`)
+                            //- .slider__content__banner 
+                            //-     p=`${index+1} Lorem ipsum dolor sit amet, consectetur adipisici.`
+                    
+                article.slider__buttons
+                    each item, index in slider_img 
+                        .slider__buttons__element
+                            img.slider__img(src=`./img/${item}`, alt=`${alt_img_slider[index]}`)
+                            label(for=`s${index+1}`)
+
+            section.skew
+                article.skew__line
+                    .skew__img
+                        img(src="img/contenido informativo1.jpg", alt="grupo de personas hablando en lengua de señas    ")
+                    .skew__text
+                        h1
+                            |EDUCACIÓN INCLUSIVA
+                        p  
+                            |El idioma inclusivo en lenguaje de señas se refiere a la práctica de utilizar un enfoque inclusivo al comunicarse con personas sordas o con discapacidad auditiva a través de la lengua de señas. La lengua de señas es un sistema de comunicación visual y gestual utilizado por las comunidades sordas para expresar ideas, emociones y conceptos. El idioma inclusivo en lenguaje de señas implica adaptar y utilizar el lenguaje de señas de manera inclusiva y respetuosa hacia todas las personas, independientemente de su género, orientación sexual, identidad de género o cualquier otra característica individual. Esto puede implicar el uso de signos neutros en términos de género, evitando estereotipos o prejuicios en la forma de comunicarse, y fomentando un ambiente inclusivo y respetuoso.
+                article.skew__line.skew__line--two
+                    .skew__text--right
+                        p |Idiomas en señas es un proyecto educativo digital creado por LEIDY HURTADO que busca reducir las brechas y obstáculos que enfrentan las personas con discapacidad auditiva. Leidy vio la necesidad de generar educación con inclusión desde su área en lenguas modernas, vio la gran necesidad que hay de enseñar a las personas sordas a comunicarse en su propio lenguaje y a darles la oportunidad de aprender varios idiomas para comunicarse con el mundo.
+                    .skew__img--fondo
+                        img(src="img/5.jpg", alt="Foto de la lider Leydy Hurtado con Jovenes hablando")
+                        img(src="logo/Logomenu2.svg", alt="Logo de idiomas en señas")
+
+                article.skew__line.skew__line--three
+                    .skew__img.skew__img--three
+                        img(src="img/lenguaje-signos.webp", alt="Dos personas hablando en leguaje de señas")
+                        
+                    .skew__text
+                        h1 |Mision
+                        p  Democratizar la Lengua de señas para que se vuelva tendencia nacional y cerrar brechas, crear equidad e inclusión social, educativa y laboral para la comunidad sorda.
+                
+            section.contact 
+                form(action="" method="method")
+                    article.contact__content
+                        .inputs-content 
+                            h1 Contactame
+                        .inputs-content
+                            div 
+                                label(for="")
+                                    |Nombre 
+                                input(type="text")
+                            div
+                                label(for="")
+                                    |Apellido 
+                                input(type="text")
+                        .inputs-content
+                            div 
+                                label(for="")
+                                    |Numero 
+                                input(type="number")
+                            div
+                                label(for="")
+                                    |Email  
+                                input(type="email")
+                        .inputs-content
+                            div
+                                label(for="") 
+                                    |Mensaje
+                                textarea#h(name="", cols="30", rows="10")
+                    article.contact__button 
+                        button(type="submit")
+                            |Enviar
+
+        footer.footer 
+            .waves
+                each item, index in Array(4)
+                    .wave(id=`wave${index+1}`)
+                ul.social-icon
+                    each item, eindex in link_social 
+                        li.social-icon__item
+                            a.social-icon__link(href=`${item}`)
+                                ion-icon(name=`logo-${name_social[eindex]}`)
+                ul.menu
+                    li.menu__item
+                            a.menu__link(href="#hero") 
+                                |Home
+                p &copy; 2023 <br>Alejandro Lopez Aguilar  <br> Josser Córdoba Rivas <br> Royner Simón Quejada Peña <br>Ferly Palacios Moya  <br> | All Rights Reserved
+        script(src="./js/main.js") 
+        script(type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js")  

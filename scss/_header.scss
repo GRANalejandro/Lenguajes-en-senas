@@ -1,0 +1,41 @@
+.header{
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 3rem;
+    z-index: 2;
+}
+.logo{
+  width: min(52vw, 298px);
+}
+.menul{
+    width: auto;
+
+    & > div{
+      width: auto;
+    }
+
+
+    &__container{
+      display: flex;
+      gap: 1em;
+      font-size: max(min(23px, 2.5vw), 16px);
+    }
+    &__item{
+      list-style: none;
+      cursor: pointer;
+
+      &:hover{
+        color: #003787;
+      }
+    }
+}
+.open-menul{
+  display: none;
+}
+.close-menul{
+  display: none;
+}
