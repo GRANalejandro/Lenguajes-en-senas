@@ -275,7 +275,6 @@ p, li, label, button {
   height: max(42%, 135px);
   padding: 2em;
   border-radius: 2em;
-  overflow-y: scroll;
   text-align: justify;
   font-size: 1.5rem;
 }
